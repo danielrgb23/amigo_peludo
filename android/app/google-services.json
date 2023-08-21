@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "958787818106",
+    "project_id": "amigopeludo-5f6d8",
+    "storage_bucket": "amigopeludo-5f6d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958787818106:android:565c6a683181dbf721e1c3",
+        "android_client_info": {
+          "package_name": "com.example.amigo_peludo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958787818106-ipr7sj906s1t6nhsfht2kgeschm0tm0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8qzLX9utDOCdioRj9UV7t8ElNKHfS_-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958787818106-ipr7sj906s1t6nhsfht2kgeschm0tm0a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "958787818106-8d9t4aa6kirremnvtobdrs8kaimld6aj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.amigoPeludo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
