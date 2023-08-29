@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 
 
 ThemeData themeData = ThemeData(
-  primaryColor: ThemeColors.primary,
+  primaryColor: ThemeColors.thertiary,
   colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: ThemeColors.primary,
-    brightness: Brightness.dark,
+    brightness: Brightness.light,
   ),
   textTheme: const TextTheme(
     bodyMedium: TextStyle(fontSize: 16),
