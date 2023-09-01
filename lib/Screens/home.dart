@@ -1,6 +1,7 @@
 import 'package:amigo_peludo/Screens/HomeScreen.dart';
 import 'package:amigo_peludo/Theme/ThemeColors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _currentPage = 0;
+  int _currentPage = 2;
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = <Widget>[
@@ -23,6 +24,49 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.pets),
+            label: 'Meu Pet',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/icons/newspaper.svg',
+                width: 24,
+                height: 24,
+                color: _currentPage == 1
+                    ? ThemeColors.thertiary
+                    : const Color.fromRGBO(168, 183, 200, 1)),
+            label: 'Notícias',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/icons/home.svg',
+                width: 24,
+                height: 24,
+                color: _currentPage == 2
+                    ? ThemeColors.thertiary
+                    : const Color.fromRGBO(168, 183, 200, 1)),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/icons/vet.svg',
+                width: 24,
+                height: 24,
+                color: _currentPage == 3
+                    ? ThemeColors.thertiary
+                    : const Color.fromRGBO(168, 183, 200, 1)),
+            label: 'Veterínario',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/icons/dog.svg',
+                width: 24,
+                height: 24,
+                color: _currentPage == 4
+                    ? ThemeColors.thertiary
+                    : const Color.fromRGBO(168, 183, 200, 1)),
+            label: 'Adote',
+          ),
+        ],
+        selectedItemColor: ThemeColors.thertiary,
         showUnselectedLabels: true,
         elevation: 3,
         iconSize: 24,
@@ -30,29 +74,6 @@ class _HomeState extends State<Home> {
         unselectedItemColor: const Color.fromRGBO(168, 183, 200, 1),
         unselectedIconTheme:
             const IconThemeData(color: Color.fromRGBO(168, 183, 200, 1)),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.pets),
-            label: 'Meu Pet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.restaurant_menu),
-            label: 'Notícias',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_bar),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_bar),
-            label: 'Veterínario',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_bar),
-            label: 'Adote',
-          ),
-        ],
-        selectedItemColor: ThemeColors.thertiary,
         currentIndex: _currentPage,
         onTap: (index) {
           setState(() {
