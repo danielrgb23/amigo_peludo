@@ -8,6 +8,7 @@ class CardHome extends StatefulWidget {
   final String textTitle;
   final String textContent;
   final ImageProvider image;
+  final VoidCallback onPress;
 
   const CardHome({
     Key? key,
@@ -16,6 +17,7 @@ class CardHome extends StatefulWidget {
     required this.image,
     required this.textTitle,
     required this.textContent,
+    required this.onPress,
   }) : super(key: key);
 
   @override
@@ -26,7 +28,8 @@ class _CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      enableFeedback: true,
+      onTap: widget.onPress,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
