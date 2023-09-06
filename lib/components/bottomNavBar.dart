@@ -1,17 +1,19 @@
-import 'package:amigo_peludo/Screens/HomeScreen.dart';
+import 'package:amigo_peludo/Screens/adote/AdoteScreen.dart';
+import 'package:amigo_peludo/Screens/home/HomeScreen.dart';
 import 'package:amigo_peludo/Theme/ThemeColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  final int page;
+  const Home({Key? key, required this.page}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  int _currentPage = 2;
+  late int _currentPage = widget.page;
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = <Widget>[
@@ -19,7 +21,7 @@ class _HomeState extends State<Home> {
       HomeScreen(),
       HomeScreen(),
       HomeScreen(),
-      HomeScreen(),
+      Adote(),
     ];
 
     return Scaffold(
