@@ -1,9 +1,11 @@
+import 'package:amigo_peludo/Screens/Login/login.dart';
 import 'package:amigo_peludo/components/bottomNavBar.dart';
 import 'package:amigo_peludo/Theme/ThemeData.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:amigo_peludo/Screens/Login/login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: themeData,
-      home: Home(page: 2),
+      home: LoginUser(),
     );
   }
 }
